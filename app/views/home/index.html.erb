@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ruby on Rails Hello World アプリ</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+    .container {
+      text-align: center;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .message {
+      font-size: 2rem;
+      color: #333;
+      margin: 1rem 0;
+    }
+    .error {
+      color: #d32f2f;
+    }
+    .success {
+      color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Ruby on Rails アプリケーション</h1>
+    <div class="message <%= @display_text == 'Error' ? 'error' : 'success' %>">
+      <%= @display_text %>
+    </div>
+    <p><small>データベースから取得した内容を表示しています</small></p>
+  </div>
+</body>
+</html>
